@@ -10,13 +10,14 @@ import lombok.Setter;
 
 public class todo {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Setter
     @Getter
     @JsonProperty("taskid") //
+    @GeneratedValue(strategy= GenerationType.SEQUENCE)
     private Long Taskid;
     @Setter
     @Getter
     @JsonProperty("task")
     private String Task;
+
 }

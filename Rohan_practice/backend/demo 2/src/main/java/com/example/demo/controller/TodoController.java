@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin
 @RestController
 public class TodoController {
 
@@ -30,7 +30,7 @@ public class TodoController {
  @PostMapping
  public ResponseEntity<Boolean> addTask(@RequestBody todo task) {
   System.out.println("Received Task: " + task);
-  return ResponseEntity.ok(service.addTask(task));
+    return ResponseEntity.ok(service.addTask(task));
  }
 
 
